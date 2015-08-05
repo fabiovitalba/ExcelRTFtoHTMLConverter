@@ -67,7 +67,7 @@ namespace MarkupConverter
                         }
                         catch (Exception ex2) { }
                         //range.Cells.set_Item(row, column, cellVal);
-                        worksheet.Range[cellName].Value = cellVal;
+                        worksheet.Range[cellName].Value = cellVal.Substring(0, cellVal.Length);
                     }
                 }
                 
