@@ -1,0 +1,10 @@
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#\MarkupConverter\bin\Debug\MarkupConverter.dll
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#\MarkupConverter\bin\Debug\MarkupConverter.pdb
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#\MarkupConverter\obj\Debug\MarkupConverter.csprojResolveAssemblyReference.cache
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#\MarkupConverter\obj\Debug\MarkupConverter.dll
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#\MarkupConverter\obj\Debug\MarkupConverter.pdb
+C:\Users\fvitalba\Desktop\C#\MarkupConverter\obj\Debug\MarkupConverter.csprojResolveAssemblyReference.cache
+C:\Users\fvitalba\Desktop\C#\MarkupConverter\obj\Debug\MarkupConverter.dll
+C:\Users\fvitalba\Desktop\C#\MarkupConverter\obj\Debug\MarkupConverter.pdb
+C:\Users\fvitalba\Desktop\C#\MarkupConverter\bin\Debug\MarkupConverter.dll
+C:\Users\fvitalba\Desktop\C#\MarkupConverter\bin\Debug\MarkupConverter.pdb

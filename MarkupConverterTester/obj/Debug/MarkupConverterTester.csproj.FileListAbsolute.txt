@@ -1,0 +1,17 @@
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\MarkupConverterTester.csprojResolveAssemblyReference.cache
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\Interop.LCC11.dll
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\MarkupConverterTester.csproj.ResolveComReference.cache
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\Window1.baml
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\Window1.g.cs
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\App.g.cs
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\MarkupConverterTester_MarkupCompile.cache
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\MarkupConverterTester.g.resources
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\MarkupConverterTester.Properties.Resources.resources
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\MarkupConverterTester.csproj.GenerateResource.Cache
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\bin\Debug\MarkupConverterTester.exe
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\bin\Debug\MarkupConverterTester.pdb
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\bin\Debug\MarkupConverter.dll
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\bin\Debug\MarkupConverter.pdb
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\bin\Debug\Interop.LCC11.dll
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\MarkupConverterTester.exe
+C:\Users\fvitalba\Desktop\C#\MarkupConverterTester\obj\Debug\MarkupConverterTester.pdb
