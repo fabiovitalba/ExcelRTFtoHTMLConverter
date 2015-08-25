@@ -52,11 +52,10 @@ namespace MarkupConverter
                                                        Type.Missing, Type.Missing);
                 var ws = excelApp.Worksheets;
                 var worksheet = (Worksheet)ws.get_Item("Sheet1");
-                //Range range = ;
-                //Range range = worksheet.UsedRange;
+
                 object[,] values = new object[(Int32.Parse(upperRow5.Text) - Int32.Parse(lowerRow5.Text) + 1), (Int32.Parse(upperColumn5.Text) - Int32.Parse(lowerColumn5.Text) + 1)];//(object[,])range.Value2;
 
-                for (int row = Int32.Parse(lowerRow5.Text); row <= Int32.Parse(upperRow5.Text); row++)    //row <= values.GetUpperBound(0)
+                for (int row = Int32.Parse(lowerRow5.Text); row <= Int32.Parse(upperRow5.Text); row++)
                 {
                     for (int column = Int32.Parse(lowerColumn5.Text); column <= Int32.Parse(upperColumn5.Text); column++ )
                     {
@@ -66,25 +65,76 @@ namespace MarkupConverter
                             cellVal = markupConverter.ConvertRtfToHtml(cellVal);
                         }
                         catch (Exception ex2) { }
-                        //range.Cells.set_Item(row, column, cellVal);
+
                         worksheet.Range[cellName].Value = cellVal.Substring(0, cellVal.Length);
                     }
                 }
                 
                 excelApp.ActiveWorkbook.SaveCopyAs(@"D:\Planlicht FOBs\RTF Converting\converted.xls");
-                
-                //excelApp.ActiveWorkbook.Save();
+
                 excelApp.ActiveWorkbook.Close(true);
                 excelApp.Quit();
            }
             catch (Exception ex)
-            {//
+            {
                 MessageBox.Show("Error while converting: " + ex.ToString());
             }
 
             MessageBox.Show("Excel Conversion Complete!");
 
         }
+
+        public void convertXlsRTFtoText(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var excelApp = new Microsoft.Office.Interop.Excel.Application();
+                excelApp.Workbooks.Open((myTextBox5.Text), Type.Missing, Type.Missing,
+                                                       Type.Missing, Type.Missing,
+                                                       Type.Missing, Type.Missing,
+                                                       Type.Missing, Type.Missing,
+                                                       Type.Missing, Type.Missing,
+                                                       Type.Missing, Type.Missing,
+                                                       Type.Missing, Type.Missing);
+                var ws = excelApp.Worksheets;
+                var worksheet = (Worksheet)ws.get_Item("Sheet1");
+
+                object[,] values = new object[(Int32.Parse(upperRow5.Text) - Int32.Parse(lowerRow5.Text) + 1), (Int32.Parse(upperColumn5.Text) - Int32.Parse(lowerColumn5.Text) + 1)];//(object[,])range.Value2;
+
+                for (int row = Int32.Parse(lowerRow5.Text); row <= Int32.Parse(upperRow5.Text); row++)
+                {
+                    for (int column = Int32.Parse(lowerColumn5.Text); column <= Int32.Parse(upperColumn5.Text); column++)
+                    {
+                        string cellName = convertCell(row, column);
+                        string cellVal = Convert.ToString(worksheet.Range[cellName].Value);
+                        try
+                        {
+                            //cellVal = markupConverter.ConvertRtfToHtml(cellVal);
+                            // Convert RTF to Plain Text
+                            System.Windows.Forms.RichTextBox rtBox = new System.Windows.Forms.RichTextBox();
+                            rtBox.Rtf = cellVal;
+                            cellVal = rtBox.Text;
+                            
+                        }
+                        catch (Exception ex2) { }
+
+                        worksheet.Range[cellName].Value = cellVal.Substring(0, cellVal.Length);
+                    }
+                }
+
+                excelApp.ActiveWorkbook.SaveCopyAs(@"D:\Planlicht FOBs\RTF Converting\converted.xls");
+
+                excelApp.ActiveWorkbook.Close(true);
+                excelApp.Quit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while converting: " + ex.ToString());
+            }
+
+            MessageBox.Show("Excel Conversion Complete!");
+        }
+
 
         public void copyXAML(object sender, RoutedEventArgs e)
         {
