@@ -53,10 +53,15 @@
                 <Grid>
                     <StackPanel Margin="10">
                         <TextBlock Margin="10" TextWrapping="Wrap" VerticalAlignment="Top">File Path in the Following Text Box</TextBlock>
+                        <Label>Input Path:</Label>
                         <TextBox BorderBrush="DarkSlateBlue" HorizontalAlignment="Stretch" Margin="10" Name="myTextBox5" />
+                        <Label>Output Path:</Label>
+                        <TextBox BorderBrush="DarkSlateBlue" HorizontalAlignment="Stretch" Margin="10" Name="myTextBox6" >D:\Planlicht FOBs\RTF Converting\converted.xls</TextBox>
                         <StackPanel Margin="5" Orientation="Horizontal" VerticalAlignment="Bottom">
+                            <Label>Rows, Min - Max</Label>
                             <TextBox BorderBrush="DarkSlateBlue" HorizontalAlignment="Left" Margin="10" Name="lowerRow5" Width="100" >min. Row</TextBox>
                             <TextBox BorderBrush="DarkSlateBlue" HorizontalAlignment="Left" Margin="10" Name="upperRow5" Width="100" >max. Row</TextBox>
+                            <Label>Columns, Min - Max</Label>
                             <TextBox BorderBrush="DarkSlateBlue" HorizontalAlignment="Left" Margin="10" Name="lowerColumn5" Width="100" >min. Column</TextBox>
                             <TextBox BorderBrush="DarkSlateBlue" HorizontalAlignment="Left" Margin="10" Name="upperColumn5" Width="100" >max. Column</TextBox>
                         </StackPanel>

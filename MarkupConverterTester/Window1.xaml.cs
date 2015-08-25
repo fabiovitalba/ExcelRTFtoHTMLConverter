@@ -109,12 +109,12 @@ namespace MarkupConverter
                         string cellVal = Convert.ToString(worksheet.Range[cellName].Value);
                         try
                         {
-                            //cellVal = markupConverter.ConvertRtfToHtml(cellVal);
                             // Convert RTF to Plain Text
-                            System.Windows.Forms.RichTextBox rtBox = new System.Windows.Forms.RichTextBox();
-                            rtBox.Rtf = cellVal;
-                            cellVal = rtBox.Text;
-                            
+                            if (cellVal.StartsWith(@"{\rtf")) {
+                                System.Windows.Forms.RichTextBox rtBox = new System.Windows.Forms.RichTextBox();
+                                rtBox.Rtf = cellVal;
+                                cellVal = rtBox.Text;
+                            }
                         }
                         catch (Exception ex2) { }
 
@@ -122,7 +122,7 @@ namespace MarkupConverter
                     }
                 }
 
-                excelApp.ActiveWorkbook.SaveCopyAs(@"D:\Planlicht FOBs\RTF Converting\converted.xls");
+                excelApp.ActiveWorkbook.SaveCopyAs(myTextBox6.Text);
 
                 excelApp.ActiveWorkbook.Close(true);
                 excelApp.Quit();
