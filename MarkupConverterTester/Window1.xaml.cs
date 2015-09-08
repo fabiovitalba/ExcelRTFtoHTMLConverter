@@ -114,11 +114,20 @@ namespace MarkupConverter
                                 System.Windows.Forms.RichTextBox rtBox = new System.Windows.Forms.RichTextBox();
                                 rtBox.Rtf = cellVal;
                                 cellVal = rtBox.Text;
+                                //cellVal.Replace(System.Environment.NewLine, "<<<EOL>>>");
+                                //cellVal.Replace("\n", "<<<EOL>>>");
+                                //cellVal.Replace("\r", "<<<EOL>>>");
                             }
+                            // Avoid Excel Formula Error
+                            if (cellVal.Substring(1,1).Equals("="))   {
+                                cellVal = "'" + cellVal;
+                            }
+
+                            worksheet.Range[cellName].Value = cellVal.Substring(0, cellVal.Length);
                         }
                         catch (Exception ex2) { }
 
-                        worksheet.Range[cellName].Value = cellVal.Substring(0, cellVal.Length);
+                        
                     }
                 }
 
