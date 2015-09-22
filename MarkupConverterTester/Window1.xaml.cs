@@ -119,9 +119,9 @@ namespace MarkupConverter
                                 //cellVal.Replace("\r", "<<<EOL>>>");
                             }
                             // Avoid Excel Formula Error
-                            if (cellVal.Substring(1,1).Equals("="))   {
+                            //if (cellVal.Substring(1,1).Equals("="))   {
                                 cellVal = "'" + cellVal;
-                            }
+                            //}
 
                             worksheet.Range[cellName].Value = cellVal.Substring(0, cellVal.Length);
                         }
