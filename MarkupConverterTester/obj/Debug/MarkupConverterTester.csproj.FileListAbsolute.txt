@@ -32,3 +32,20 @@ E:\Coding\ExcelRTFtoHTMLConverter\MarkupConverterTester\obj\Debug\MarkupConverte
 E:\Coding\ExcelRTFtoHTMLConverter\MarkupConverterTester\obj\Debug\MarkupConverterTester.g.resources
 E:\Coding\ExcelRTFtoHTMLConverter\MarkupConverterTester\obj\Debug\MarkupConverterTester.Properties.Resources.resources
 E:\Coding\ExcelRTFtoHTMLConverter\MarkupConverterTester\obj\Debug\MarkupConverterTester.csproj.GenerateResource.Cache
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\Interop.LCC11.dll
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\MarkupConverterTester.csproj.ResolveComReference.cache
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\MarkupConverterTester.exe
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\MarkupConverterTester.pdb
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\bin\Debug\MarkupConverterTester.exe
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\bin\Debug\MarkupConverterTester.pdb
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\bin\Debug\MarkupConverter.dll
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\bin\Debug\MarkupConverter.pdb
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\bin\Debug\Interop.LCC11.dll
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\MarkupConverterTester.csprojResolveAssemblyReference.cache
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\Window1.baml
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\Window1.g.cs
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\App.g.cs
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\MarkupConverterTester_MarkupCompile.cache
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\MarkupConverterTester.g.resources
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\MarkupConverterTester.Properties.Resources.resources
+\\tsclient\D\Planlicht FOBs\RTF Converting\C#_2\MarkupConverterTester\obj\Debug\MarkupConverterTester.csproj.GenerateResource.Cache

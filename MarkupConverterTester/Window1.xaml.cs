@@ -44,6 +44,8 @@ namespace MarkupConverter
         {
             try
             {
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+
                 var excelApp = new Microsoft.Office.Interop.Excel.Application();
                 excelApp.Workbooks.Open((myTextBox5.Text), Type.Missing, Type.Missing,
                                                        Type.Missing, Type.Missing,
@@ -54,25 +56,30 @@ namespace MarkupConverter
                                                        Type.Missing, Type.Missing);
                 var ws = excelApp.Worksheets;
                 var worksheet = (Worksheet)ws.get_Item("Sheet1");
-
+                System.Windows.Forms.RichTextBox rtBox = new System.Windows.Forms.RichTextBox();
                 object[,] values = new object[(Int32.Parse(upperRow5.Text) - Int32.Parse(lowerRow5.Text) + 1), (Int32.Parse(upperColumn5.Text) - Int32.Parse(lowerColumn5.Text) + 1)];//(object[,])range.Value2;
 
                 for (int row = Int32.Parse(lowerRow5.Text); row <= Int32.Parse(upperRow5.Text); row++)
                 {
-                    for (int column = Int32.Parse(lowerColumn5.Text); column <= Int32.Parse(upperColumn5.Text); column++ )
+                    for (int column = Int32.Parse(lowerColumn5.Text); column <= Int32.Parse(upperColumn5.Text); column++)
                     {
                         string cellName = convertCell(row, column);
                         string cellVal = Convert.ToString(worksheet.Range[cellName].Value);
-                        try { 
+                        try
+                        {
+                            // Convert RTF to HTML
                             cellVal = markupConverter.ConvertRtfToHtml(cellVal);
                         }
                         catch (Exception ex2) { }
 
+                        // Avoid Excel Formula Error
+                        cellVal = "'" + cellVal;
+
                         worksheet.Range[cellName].Value = cellVal.Substring(0, cellVal.Length);
                     }
                 }
-                
-                excelApp.ActiveWorkbook.SaveCopyAs(@"D:\Planlicht FOBs\RTF Converting\converted.xls");
+
+                excelApp.ActiveWorkbook.SaveCopyAs(myTextBox6.Text);
 
                 excelApp.ActiveWorkbook.Close(true);
                 excelApp.Quit();
@@ -88,8 +95,6 @@ namespace MarkupConverter
 
         public void convertXlsRTFtoText(object sender, RoutedEventArgs e)
         {
-            //try
-            //{
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
             var excelApp = new Microsoft.Office.Interop.Excel.Application();
@@ -115,18 +120,11 @@ namespace MarkupConverter
                     {
                         // Convert RTF to Plain Text
                         if (cellVal.StartsWith(@"{\rtf")) {
-                            
                             rtBox.Rtf = cellVal;
                             cellVal = rtBox.Text;
-                            
-                            //cellVal.Replace(System.Environment.NewLine, "<<<EOL>>>");
-                            //cellVal.Replace("\n", "<<<EOL>>>");
-                            //cellVal.Replace("\r", "<<<EOL>>>");
                         }
                         // Avoid Excel Formula Error
-                        //if (cellVal.Substring(1,1).Equals("="))   {
                         cellVal = "'" + cellVal;
-                        //}
 
                         worksheet.Range[cellName].Value = cellVal.Substring(0, cellVal.Length);
                     }
@@ -138,14 +136,7 @@ namespace MarkupConverter
 
             excelApp.ActiveWorkbook.Close(true);
             excelApp.Quit();
-        /*}
-        
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error while converting: " + ex.ToString());
-            }
-            */
-            
+
             MessageBox.Show("Excel Conversion Complete!");
         }
 
